@@ -21,16 +21,6 @@ a {
 img {
     display: block; 
 }
-.nav-link,
-.contacts-address,
-.hero-banner-button,
-.team-item-social-link,
-.portfolio-item-list,
-.footer-social-link {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .container {
     max-width: 1158px;
@@ -41,6 +31,9 @@ img {
 /* page header start */
 .page-header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -96,12 +89,13 @@ img {
 .nav-link.current {
     color: #404bbf;
     position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .nav-link.current::after {
     content: "";
     position: absolute;
-    left: 50%;
+    left: 0;
     bottom: -1px;
     transform: translateX(-50%);
     width: 48px;
@@ -119,6 +113,7 @@ img {
     display: flex;
     align-items: center;
     gap: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .contacts-address {
@@ -146,6 +141,7 @@ img {
     background-position: center;
     border: 1px solid #000;
     padding: 188px 0;
+    max-width: 1440px;
 }
 
 .hero-banner-title {
@@ -173,6 +169,7 @@ img {
     border-radius: 4px;
     display: block;
     min-width: 169px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-banner-button:hover,
@@ -196,13 +193,17 @@ img {
 }
 
 .description-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
     border: 1px solid #8e8f99;
-        border-radius: 4px;
-        max-width: 264px;
-        padding: 24px;
-        background-color: #f4f4fd;
-        text-align: center;
-        margin-bottom: 8px;
+    border-radius: 4px;
+    max-width: 264px;
+    padding: 24px;
+    background-color: #f4f4fd;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .description-list-subtitle {
@@ -419,8 +420,9 @@ img {
 .footer-container {
     display: flex;
     gap: 120px;
-    flex-wrap: wrap;
-    align-items: flex-start; 
+    flex-wrap: wrap; 
+    align-items: baseline;
+    margin-right: 120px;
 }
 
 .footer-logo {
@@ -475,7 +477,7 @@ img {
 }
 
 .footer-social-icon {
-    fill: #fff;
+    fill: #f4f4fd;
     width: 16px;
     height: 16px;
 }
