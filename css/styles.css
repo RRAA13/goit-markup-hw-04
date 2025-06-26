@@ -378,7 +378,7 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--color-text, #f4f4fd);
+    color: #f4f4fd;
     padding: 40px 32px;
     background-color: #4d5ae5;
     height: 100%;
@@ -387,7 +387,7 @@ img {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);    
 }
 
-.portfolio-card:hover .portfolio-overlay-text {
+.portfolio-item-list:hover .portfolio-overlay-text {
     transform: translateY(0);
     opacity: 1;
 }
@@ -425,7 +425,6 @@ img {
 
 .footer-container {
     display: flex;
-    gap: 120px;
     flex-wrap: wrap; 
     align-items: baseline;
 }
@@ -488,8 +487,6 @@ img {
 
 .footer-social-icon {
     fill: #f4f4fd;
-    width: 16px;
-    height: 16px;
 }
 /* footer stop */
 
